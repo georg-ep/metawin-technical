@@ -21,14 +21,6 @@ export default {
       },
     };
   },
-  // Make sure that the deployed applicaiton is not being indexed / followed
-  head() {
-    return {
-      meta: [
-        { name: 'robots', content: 'noindex,nofollow' },
-      ],
-    };
-  },
   async mounted() {
     await this.fetchWinners(true);
     this.$nextTick(() =>
